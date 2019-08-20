@@ -17,7 +17,9 @@ const Footer = class extends React.Component {
         </div>
 
         <div className="content has-text-centered">
-          <a href="mailto:petface@163.com">petface@163.com</a>
+          <p>email: <a href="mailto:petface@163.com">petface@163.com</a></p>
+          <p>web design and dev by <a href="https://notimportant.org/">Li Song</a></p>
+          <p>© 2019, all rights reserved 皮特飞丝声音工作室</p>
         </div>
       </footer>
     )

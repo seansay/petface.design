@@ -1,14 +1,18 @@
 @import "~bulma/sass/utilities/initial-variables"
 
+$body-family: "Volkhov", BlinkMacSystemFont, -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
 // Config vars
 // Kaldi logo brand color: #FD461E
-$main-color: #444
+$blue: rgb(24, 28, 92)
+$main-color: #333
 $kaldi-red-invert: #fff
 
 $primary: $main-color
 $primary-invert: $kaldi-red-invert
 $body-color: #333
-$black: #2b2523
+$black: rgb(7, 4, 3)
+$link: $blue;
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -141,4 +145,20 @@ $menu-label-color: $white-ter
 
 
 .navbar-item img
-    max-height: 3rem;
+    max-height: 3rem
+
+html
+  background-color: rgb(244, 245, 246)
+
+footer
+  margin-bottom: 2rem
+
+  .content
+    p:not(:last-child)
+      margin-bottom: 0
+    p
+      color: $main-color
+
+
+h1, h2, h3
+  color: $blue
