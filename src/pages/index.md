@@ -3,7 +3,7 @@ templateKey: index-page
 title: Pet face声音工作室
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+subheading: 专业的声音设计
 mainpitch:
   title: 为什么选择皮特飞丝
   description: >
