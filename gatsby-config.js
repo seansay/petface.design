@@ -5,6 +5,7 @@ module.exports = {
     title: 'Petface声音设计',
     description:
       '来自中国北京的声音工作室',
+    email: 'petface@163.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

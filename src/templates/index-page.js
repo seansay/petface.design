@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({
   image,
@@ -19,11 +18,11 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
+        // backgroundImage: `url(${
+        //   !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        // })`,
+        // backgroundPosition: `top left`,
+        // backgroundAttachment: `fixed`,
       }}
     >
       <div
@@ -89,19 +88,8 @@ export const IndexPageTemplate = ({
                 <Features gridItems={intro.blurbs} />
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
+                    <Link className="btn" to="/works">
+                      查看我们的作品
                     </Link>
                   </div>
                 </div>
