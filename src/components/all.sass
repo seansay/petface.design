@@ -11,7 +11,8 @@ $kaldi-red-invert: #fff
 $primary: $main-color
 $primary-invert: $kaldi-red-invert
 $body-color: #333
-$black: rgb(7, 4, 3)
+// $black: rgb(7, 4, 3)
+$black: rgb(15, 19, 13)
 $link: $blue;
 
 .navbar .navbar-menu
@@ -65,12 +66,15 @@ $link: $blue;
     border-radius: .25rem
     text-decoration: none
     font-weight: 700
-    color: $main-color
+    color: #ccc
+    background-color: $blue
     text-align: center
     -webkit-box-shadow: inset 0 0 0 2px $main-color
-    box-shadow: inset 0 0 0 2px #f40
+    box-shadow: inset 0 0 0 2px $blue
     -webkit-transition: all .15s ease
     transition: all .15s ease
+    &:hover
+      color: #fff
 
 .margin-top-0
   margin-top: 0 !important
@@ -96,6 +100,10 @@ $menu-item-active-color: $kaldi-red-invert
 $menu-item-active-background-color:	$kaldi-red-invert
 $menu-list-border-left: 1px solid $kaldi-red-invert
 $menu-label-color: $white-ter
+$navbar-item-hover-color: #eee
+$navbar-item-active-color: #fff
+$navbar-item-hover-background-color: $blue !default
+$navbar-item-active-background-color: $blue !default
 
 
 .menu-label
@@ -139,16 +147,21 @@ $menu-label-color: $white-ter
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail
-    text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em;
+    text-align: center
+    max-width: 70%
+    margin: 0 0 1em
 
 
-.navbar-item img
+.navbar-item
+  color: #999
+  img
     max-height: 3rem
 
+.navbar-burger
+  color: #dadada
+
 html
-  background-color: rgb(244, 245, 246)
+  background-color: rgb(209, 214, 226)
 
 footer
   margin-bottom: 2rem
@@ -157,8 +170,18 @@ footer
     p:not(:last-child)
       margin-bottom: 0
     p
+      font-size: 0.75rem
       color: $main-color
 
 
 h1, h2, h3
   color: $blue
+
+#navMenu
+  background-color: $black
+
+#topnav
+  background-color: $black
+
+body
+  margin-top: 50px
