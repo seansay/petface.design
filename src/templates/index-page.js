@@ -2,12 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Layout from '../components/Layout'
 
 export const IndexPageTemplate = ({
   image,
   title,
   heading,
+  image2,
   subheading,
   mainpitch,
   description,
@@ -17,11 +19,11 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image margin-top-0"
       style={{
-        // backgroundImage: `url(${
-        //   !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        // })`,
-        // backgroundPosition: `top left`,
-        // backgroundAttachment: `fixed`,
+        backgroundImage: `url(${
+          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        })`,
+        backgroundPosition: `top center`,
+        backgroundAttachment: `fixed`,
       }}
     >
       <div
@@ -38,15 +40,18 @@ export const IndexPageTemplate = ({
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
             boxShadow:
-              'rgb(242, 244, 241) 0.5rem 0px 0px, rgb(230, 232, 233) -0.5rem 0px 0px',
+              'rgb(30, 15, 21) 0.5rem 0px 0px, rgb(10, 22, 12) -0.5rem 0px 0px',
             backgroundColor: 'rgb(240, 243, 243)',
+            border: "5px solid black",
+            fontWeight: '400 !important',
+            color: 'black',
             lineHeight: '1',
-            padding: '0.25em',
+            padding: '0.2em',
           }}
         >
           {title}
         </h1>
-        <h3
+        {/* <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
             boxShadow:
@@ -57,7 +62,7 @@ export const IndexPageTemplate = ({
           }}
         >
           test
-        </h3>
+        </h3> */}
       </div>
     </div>
     <section className="section section--gradient">
@@ -68,26 +73,29 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="content">
                   <div className="tile">
-                    <h1 className="title">test</h1>
+                    <h1 className="title">{mainpitch.title}</h1>
                   </div>
                   <div className="tile">
-                    <h3 className="subtitle">test</h3>
+                    <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      test
-                    </h3>
-                    <p>test</p>
-                  </div>
+
+                  <PreviewCompatibleImage imageInfo={{
+                    image: image2,
+                    alt: '李焱在工作'
+                  }}/>
                 </div>
 
                 <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/works">
-                      查看我们的作品案例
-                    </Link>
+                  <div className="column is-12 has-text-left">
+                    <p>你可以
+                    <Link className="" to="/works">
+                      查看我们过往参与的作品
+                    </Link>、<Link className="" to="/about">
+                      了解我们的工作室和主创
+                    </Link>，或直接<Link className="" to="/contact">
+                      联系我们
+                    </Link>。
+                    </p>
                   </div>
                 </div>
               </div>
@@ -101,6 +109,7 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
@@ -118,6 +127,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
+        image2={frontmatter.image2}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
@@ -145,6 +155,20 @@ export const pageQuery = graphql`
       frontmatter {
         title
         heading
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image2 {
+          childImageSharp {
+            fluid(maxWidth: 700, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         subheading
         mainpitch {
           title

@@ -2,7 +2,7 @@
 templateKey: 'works-page'
 path: /works
 title: 作品案例
-image: /img/jumbotron.jpg
+image: /img/studio-2.jpg
 heading:
 description: >-
   Petface工作室参与过多项国内获奖电影的声音工作，以下是一些精选。

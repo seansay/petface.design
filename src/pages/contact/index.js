@@ -58,7 +58,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'name'}>
-                    你的姓名/Name
+                    你的姓名
                   </label>
                   <div className="control">
                     <input
@@ -88,7 +88,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'message'}>
-                    Message
+                    文字
                   </label>
                   <div className="control">
                     <textarea
@@ -102,7 +102,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <button className="button is-black" type="submit">
-                    提交/Submit
+                    提交
                   </button>
                 </div>
               </form>

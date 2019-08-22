@@ -1,16 +1,14 @@
 ---
 templateKey: index-page
-title: Pet face声音工作室
-image: /img/home-jumbotron.jpg
+title: Petface Sound Design
+image: /img/studio-1.jpg
+image2: /img/liyan-working.jpg
 heading: Great coffee with a conscience
 subheading: 专业的声音设计
 mainpitch:
-  title: 为什么选择皮特飞丝
+  title: 📺我们提供的服务
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    声音设计，影视后期，音乐混音
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,

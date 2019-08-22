@@ -18,9 +18,9 @@ export const WorksPageTemplate = ({
     <div
       className="full-width-image-container margin-top-0"
       style={{
-        // backgroundImage: `url(${
-        //   !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        // })`,
+        backgroundImage: `url(${
+          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        })`,
           backgroundColor: 'rgb(24, 28, 92)',
           height: '200px',
       }}
@@ -122,6 +122,13 @@ export const worksPageQuery = graphql`
         main {
           heading
           description
+        }
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
         works {
           title
