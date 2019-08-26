@@ -91,7 +91,7 @@ export const IndexPageTemplate = ({
                     <Link className="" to="/works">
                       查看我们过往参与的作品
                     </Link>、<Link className="" to="/about">
-                      了解我们的工作室和主创
+                      了解我们的工作室以及团队
                     </Link>，或直接<Link className="" to="/contact">
                       联系我们
                     </Link>。
