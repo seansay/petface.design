@@ -6,6 +6,39 @@ image: /img/studio-2.jpg
 heading:
 description: >-
   Petface工作室参与过多项国内获奖电影的声音工作，以下是一些精选。
+worksCategory:
+  - title: 电影长片声音后期代表作品
+    items:
+      - 无名狂
+      - 老炮儿
+      - 黑处有什么
+      - 呼吸正常
+      - 民警攻略
+  - title: 电影短片声音后期代表作品
+    items:
+      - 惊蛰
+      - 马拉之死
+      - 饭卡与献身
+      - 乔安
+      - 局中局
+  - title: 剧集类声音后期代表作品
+    items:
+      - 白夜追凶
+      - 隐秘而伟大
+  - title: 动漫类声音后期代表作品
+    items:
+      - 宇宙护卫队 第一季/第二季
+  - title: 纪录片声音后期代表作品
+    items:
+      - Discovery-The Very Edge of China
+      - Discovery-In Inner Mongolia
+  - title: 广告类声音后期代表作品
+    description: 卡地亚，奥迪，三星，戴森......
+  - title: 原创动态logo声音设计代表作品
+    items:
+      - 春秋影视动态logo
+      - 五元文化动态logo
+
 works:
   - title: 无名狂
     year: 2019

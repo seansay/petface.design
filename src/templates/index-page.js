@@ -79,10 +79,10 @@ export const IndexPageTemplate = ({
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
 
-                  <PreviewCompatibleImage imageInfo={{
+                  {/* <PreviewCompatibleImage imageInfo={{
                     image: image2,
                     alt: '李焱在工作'
-                  }}/>
+                  }}/> */}
                 </div>
 
                 <div className="columns">
@@ -157,7 +157,7 @@ export const pageQuery = graphql`
         heading
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 1024, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

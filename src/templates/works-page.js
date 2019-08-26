@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Works from '../components/Works'
+import WorksCategory from '../components/WorksCategory'
 // import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const WorksPageTemplate = ({
@@ -10,6 +11,7 @@ export const WorksPageTemplate = ({
   title,
   heading,
   description,
+  worksCategory,
   intro,
   works,
   main,
@@ -48,7 +50,8 @@ export const WorksPageTemplate = ({
           </div>
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <Works gridItems={works} />
+              <WorksCategory items={worksCategory} />
+              {/* <Works gridItems={works} /> */}
             </div>
           </div>
         </div>
@@ -91,6 +94,7 @@ const WorksPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         description={frontmatter.description}
+        worksCategory={frontmatter.worksCategory}
         intro={frontmatter.intro}
         main={frontmatter.main}
         works={frontmatter.works}
@@ -129,6 +133,11 @@ export const worksPageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+        }
+        worksCategory {
+          title
+          description
+          items
         }
         works {
           title
